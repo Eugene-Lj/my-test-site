@@ -14,17 +14,3 @@ class IndexView(generic.ListView):
         context['services_list'] = SERVICES.objects.all()
         # And so on for more models
         return context
-
-
-'''def index(request):
-    return render(request, 'mainApp/index.html')
-
-class PortfolioList(generic.ListView):
-    model = Portfolio
-    queryset = Portfolio.objects.all()
-    template_name = 'mainApp/posts.html'
-
-class AboutList(generic.ListView):
-    model = About
-    queryset = About.objects.all()
-    template_name = 'mainApp/about_list.html' '''
