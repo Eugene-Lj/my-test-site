@@ -3,7 +3,7 @@ from django.db import models
 class SERVICES(models.Model):
     s_title = models.CharField(max_length=200)
     s_post = models.TextField()
-    s_image = models.ImageField(null=True, upload_to='images/')
+    #s_image = models.ImageField(null=True, upload_to='images/')
 
     def __str__(self):
         return self.s_title
