@@ -21,10 +21,10 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('blockchain_data/', include('blockchain_data.urls')),
+    path('catalog/', include('catalog.urls')),
     path('', include('mainApp.urls')),
     path('', RedirectView.as_view(url='mainApp/')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-if settings.DEBUG: # new
+if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

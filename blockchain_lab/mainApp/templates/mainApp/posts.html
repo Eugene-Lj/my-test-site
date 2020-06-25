@@ -10,10 +10,10 @@
         <div class="row text-center">
             {% for services in services_list %}
             <div class="col-md-4">
-                {% if forloop.first %}<span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i></span>{% else %}<span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-laptop fa-stack-1x fa-inverse"></i></span>{%
-                elif forloop.last %}<span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-lock fa-stack-1x fa-inverse"></i></span>{% endif %}
-                <h4 class="my-3">{{services_list.s_title}}</h4>
-                <p class="text-muted">{{services_list.s_post}}</p>
+                {% if forloop.counter|divisibleby:2 %}
+                <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i></span> {% else %}<span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-laptop fa-stack-1x fa-inverse"></i></span>                {% if forloop.counter and forloop.last %}<span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-lock fa-stack-1x fa-inverse"></i></span> {% endif %} {% endif %}
+                <h4 class="my-3">{{services.s_title}}</h4>
+                <p class="text-muted">{{services.s_post}}</p>
             </div>
             {% endfor %}
         </div>
