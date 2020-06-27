@@ -49,14 +49,18 @@
             </thead>
             <tbody>
                 {% for table in object_list%} {% if forloop.counter|divisibleby:2 %}
-                <tr class="active">{% else %}
-                    <tr class="success">{% endif %}
-                        <td>{{table.start_date}}</td>
-                        <td>{{table.end_date}}</td>
+                <tr class="active">
+                    {% else %}
+                    <tr class="success">
+                        {% endif %}
+                        <td>{{table.start_date|date:"d-m-y"}}</td>
+                        <td>{{table.end_date|date:"d-m-y"}}</td>
                         <td>{{table.title}}</td>
                         <td>{{table.description}}</td>
-                        <td colspan="2">{{table.files.url}}</td>
-                        <td>{{table.files2.size|filesizeformat}}</td>
+                        <td colspan="2">
+                            <a href="{{table.files.url}}">Files</a>
+                        </td>
+                        <td><a href="{{table.files2.url}}">Files</a>
                     </tr>
                     {% endfor %}
             </tbody>

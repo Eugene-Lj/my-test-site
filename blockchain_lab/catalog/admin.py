@@ -6,7 +6,3 @@ class TableAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Table, TableAdmin)
-'''class TableFileInline(admin.TabularInline):
-    model = TableFile
-
-class TableAdmin(admin.ModelAdmin): inlines = [TableFileInline,]'''

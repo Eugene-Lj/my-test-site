@@ -10,7 +10,3 @@ class Table(models.Model):
     
     def __str__(self):
         return self.title
-
-'''class TableFile(models.Model):
-    files = models.FileField(upload_to='uploads/', null=True)
-    page = models.ForeignKey('Table', on_delete=models.DO_NOTHING)'''
