@@ -12,5 +12,4 @@ class IndexView(generic.ListView):
         context['about_list'] = About.objects.all()
         context['team_list'] = Team.objects.all()
         context['services_list'] = SERVICES.objects.all()
-        # And so on for more models
         return context
