@@ -1,10 +1,12 @@
 from django import forms
-from catalog.models import Table
+from catalog.models import Procurement
+from django.forms.widgets import ClearableFileInput
 
-class TableForm(forms.ModelForm):
+class ProcurementForm(forms.ModelForm):
     class Meta:
-        model = Table
-        fields = ('description', 'files', 'title', 'files2')
-'''class FileForm(forms.Form):
-    file = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}))'''
-    
+        model = Procurement
+        fields = ('description', 'files', 'title')
+        widgets = {
+            'files': ClearableFileInput(attrs={'multiple': True}),
+        }
+        # widget is important to upload multiple files

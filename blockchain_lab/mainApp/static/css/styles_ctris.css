@@ -1,0 +1,37 @@
+@charset "UTF-8";
+h1 {
+    color: #de4a18;
+}
+
+body {
+    background-color: #000000;
+    /* Цвет фона веб-страницы */
+}
+
+hr {
+    border: none;
+    /* Убираем границу */
+    background-color: #de4a18;
+    /* Цвет линии */
+    color: #de4a18;
+    /* Цвет линии для IE6-7 */
+    height: 2px;
+    /* Толщина линии */
+}
+
+footer {
+    color: #858585;
+}
+
+ol {
+    list-style: none;
+}
+
+ol li:before {
+    content: "—";
+    position: relative;
+    left: -5px;
+}
+
+
+/*background-color: #dc2e0b;*/

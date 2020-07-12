@@ -53,21 +53,16 @@
                 </tr>
             </thead>
             <tbody>
-                {% for table in table_list%} {% if forloop.counter|divisibleby:2 %}
+                {% for procurement in procurement_list %} {% if forloop.counter|divisibleby:2 %}
                 <tr class="active">
                     {% else %}
                     <tr class="success">
                         {% endif %}
-                        <td>{{table.start_date|date:"d-m-y"}}</td>
-                        <td>{{table.end_date|date:"d-m-y"}}</td>
-                        <td>{{table.title}}</td>
-                        <td>{{table.description}}</td>
-                        <td colspan="2"><a href="{{table.files.url}}">Files</a></td>
-                        {% if table.is_valid%}
-                        <td><a href="{{table.files2.url}}">Files</a></td>
-                        {% else %}
-                        <td></td>
-                        {% endif %}
+                        <td>{{procurement.start_date|date:"d-m-y"}}</td>
+                        <td>{{procurement.end_date|date:"d-m-y"}}</td>
+                        <td>{{procurement.title}}</td>
+                        <td>{{procurement.description}}</td>
+                        <td colspan="2"><a href="{{procurement.files.url}}">Files</a></td>
                     </tr>
                     {% endfor %}
             </tbody>

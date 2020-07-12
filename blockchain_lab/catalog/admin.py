@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import Table
-from .forms import TableForm
+from .models import Procurement
 
-class TableAdmin(admin.ModelAdmin):
+
+class ProcurementAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(Table, TableAdmin)
+admin.site.register(Procurement, ProcurementAdmin)
